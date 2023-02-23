@@ -3,6 +3,7 @@ import { Entypo } from "react-native-vector-icons";
 import ConfiguracoesScreen from "../screens/ConfiguracoesScreen";
 import FavoritosScreen from "../screens/FavoritosScreen";
 import HomeScreen from "../screens/HomeScreen";
+import LoginScreen from "../screens/LoginScreen";
 import MinhaListaScreen from "../screens/MinhaListaScreen";
 import PerfilScreen from "../screens/PerfilScreen";
 
@@ -57,6 +58,15 @@ export default function DrawerNavigator() {
       <Drawer.Screen
         name="Configurações"
         component={ConfiguracoesScreen}
+        options={{
+          drawerIcon: ({ color, size }) => (
+            <Entypo name="cog" color={color} size={size} />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Login"
+        component={LoginScreen}
         options={{
           drawerIcon: ({ color, size }) => (
             <Entypo name="cog" color={color} size={size} />
